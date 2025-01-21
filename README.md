@@ -18,7 +18,7 @@ Option 1: Download and Execute the Script Directly
 
 To download and execute the script in one step, use the following command:
   ```bash
-curl -s https://raw.githubusercontent.com/djamic/NetplanToNetwork/refs/heads/main/netplan_to_interfaces.sh | bash
+sudo curl -s https://raw.githubusercontent.com/djamic/NetplanToNetwork/refs/heads/main/netplan_to_interfaces.sh |  sudo bash
 ```
 
 Option 2:
