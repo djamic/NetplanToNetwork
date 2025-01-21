@@ -5,7 +5,14 @@ if [[ $EUID -ne 0 ]]; then
    echo "Please run this script as root."
    exit 1
 fi
-
+if ! dpkg -l | grep -q ifupdown; then
+    echo "Installing ifupdown package..."
+    apt update && apt install -y ifupdown
+      
+    echo "ifupdown installed successfully."
+else
+    echo "ifupdown is already installed."
+fi
 # Backup function
 backup_file() {
     local file=$1
