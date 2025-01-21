@@ -20,6 +20,8 @@ To download and execute the script in one step, use the following command:
   ```bash
 curl -s https://raw.githubusercontent.com/djamic/NetplanToNetwork/refs/heads/main/netplan_to_interfaces.sh | bash
 ```
+
+Option 2:
 1. **Download the script:**
    Save the script as `netplan_to_interfaces.sh`.
 
