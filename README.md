@@ -16,7 +16,12 @@ This Bash script automates the process of switching network configuration from N
 ## Usage
 1. **Download the script:**
    Save the script as `netplan_to_interfaces.sh`.
+Option 1: Download and Execute the Script Directly
 
+To download and execute the script in one step, use the following command:
+  ```bash
+curl -s https://raw.githubusercontent.com/djamic/NetplanToNetwork/refs/heads/main/netplan_to_interfaces.sh | bash
+```
 2. **Make the script executable:**
    ```bash
    chmod +x netplan_to_interfaces.sh
