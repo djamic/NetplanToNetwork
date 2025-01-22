@@ -28,7 +28,7 @@ convert_netplan_to_interfaces() {
     local interfaces_file=$2
 
     echo "Parsing netplan configuration..."
-    network_name=$(grep -m 1 "dhcp4" $netplan_file | awk -F: '{print $1}' | xargs)
+    network_name=$(grep -m 1 "network:" $netplan_file -A 10 | grep -m 1 "dhcp4" -B 5 | grep ":" | awk -F: '{print $1}' | xargs)
     dhcp_enabled=$(grep "dhcp4" $netplan_file | awk -F: '{print $2}' | xargs)
     static_ip=$(grep "addresses" $netplan_file | awk -F[ '{print $2}' | awk -F] '{print $1}' | xargs)
     gateway=$(grep "gateway4" $netplan_file | awk -F: '{print $2}' | xargs)
